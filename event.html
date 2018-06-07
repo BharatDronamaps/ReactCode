@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script type="text/babel">
+    let Component = React.createClass({
+        doSomething: function() {
+            alert("The text displaying is: " + this.props.children);
+        },
+        render: function() {
+            return(
+                <div>
+                    <h3>{this.props.user}</h3>
+                    <a onClick={this.doSomething} href="#" >Click me</a>
+                </div>
+            );
+        }
+    });
+    ReactDOM.render(
+        <div>
+            <Component user="Bharat">This guy is awesome</Component>
+            <Component user="SMS">She smells like petrol</Component>
+        </div>, document.getElementById('content')
+    );
+</script>
+
+</body>
+</html>

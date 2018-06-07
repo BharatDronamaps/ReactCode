@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>6</title>
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/babel">
+
+    let Comment = React.createClass({
+        edit: function () {
+            alert('Editing comment');
+        },
+        remove: function () {
+            alert('Removing comment');
+        },
+        render: function() {
+            return (
+                <div classname="commentContainer">
+                    <div className="commentText">{this.props.children}</div>
+                    <button onClick={this.edit} className="button-primary">Edit</button>
+                    <button onClick={this.remove} className="button-danger">Remove</button>
+                </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <div className="board">
+            <Comment>Hey my name is Bharat</Comment>
+            <Comment>Vikrant</Comment>
+            <Comment>Babu</Comment>
+        </div>
+        , document.getElementById('container'));
+</script>
+
+</body>
+</html>

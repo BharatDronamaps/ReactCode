@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3rd</title>
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script type="text/babel">
+    let Properties = React.createClass({
+        render: function() {
+            return(
+                <h2>{this.props.user} likes to eat {this.props.food}</h2>
+            );
+        }
+    });
+    ReactDOM.render(
+        <div>
+            <Properties user="Bharat" food="Fish" />
+            <Properties user="Sehezad" food="Meat" />
+            <Properties user="Rahul" food="Chicken" />
+            <Properties user="Amit" food="Veg" />
+        </div>, document.getElementById('content')
+    );
+</script>
+
+</body>
+</html>

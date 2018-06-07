@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1st</title>
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script type="text/babel">
+
+    let SingleComponent = React.createClass({
+        render: function() {
+            return (
+                <h2>My name is Bharat</h2>
+            );
+        }
+    });
+    ReactDOM.render(<SingleComponent />, document.getElementById('content'));
+</script>
+
+</body>
+</html>

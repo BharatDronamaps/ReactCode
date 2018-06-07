@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>forth</title>
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script type="text/babel">
+    let PropertiesComponent = React.createClass({
+        render: function() {
+            return(
+                <div>
+                    <h3>{this.props.user}</h3>
+                    <p>{this.props.children}</p>
+                </div>
+            );
+        }
+    });
+    ReactDOM.render(
+        <div>
+            <PropertiesComponent user="Bharat">This guy is awesome</PropertiesComponent>
+            <PropertiesComponent user="Babu">He smells like mints</PropertiesComponent>
+        </div>,
+        document.getElementById('content')
+    );
+</script>
+
+</body>
+</html>
